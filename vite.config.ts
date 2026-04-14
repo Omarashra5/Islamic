@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import path from 'path'
-import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
 // Fix for __dirname in Vite (ESM)
@@ -23,8 +22,7 @@ function figmaAssetResolver() {
 export default defineConfig({
   plugins: [
     figmaAssetResolver(),
-    react(),
-    tailwindcss(),
+    react()
   ],
   resolve: {
     alias: {
